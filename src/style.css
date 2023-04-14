@@ -1,0 +1,86 @@
+.vue3-fullpage {
+	&__wrapper {
+		width: 100%;
+		height: 100vh;
+		overflow-y: scroll;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		scroll-snap-type: y mandatory;
+	}
+	&__page {
+		width: 100%;
+		height: 100%;
+		scroll-snap-align: start;
+	}
+	&__navigation {
+		position: fixed;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0;
+		padding: 1rem;
+		display: flex;
+		flex-flow: column;
+		row-gap: var(--v3fp-navigation-gap);
+
+		&-dot {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			margin: 0;
+			padding: 6px;
+			width: auto;
+			overflow: hidden;
+			background: transparent;
+			color: inherit;
+			font: inherit;
+			line-height: normal;
+			-webkit-font-smoothing: inherit;
+			-moz-osx-font-smoothing: inherit;
+			-webkit-appearance: none;
+			border-radius: 50%;
+			cursor: pointer;
+
+			&::before,
+			&::after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: '';
+				background: var(--v3fp-navigation-colour);
+				opacity: 0.2;
+				transition: opacity 150ms ease-in-out;
+			}
+
+			&::after {
+				background: white;
+				z-index: -1;
+			}
+
+			&:hover::before {
+				opacity: 0.3;
+			}
+
+			&:active::before {
+				opacity: 0.4;
+			}
+
+			&-inner {
+				background-color: var(--v3fp-navigation-colour);
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				opacity: 0.8;
+				transition: background-color 150ms ease-in-out;
+			}
+
+			&.is-active .vue3-fullpage__navigation-dot-inner {
+				background-color: var(--v3fp-navigation-colour--active);
+			}
+		}
+	}
+}
