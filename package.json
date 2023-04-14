@@ -3,6 +3,10 @@
 	"version": "0.1.0",
 	"author": "southcoastweb",
 	"homepage": "https://southcoastweb.co.uk",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/southcoastweb/vue3-fullpage.git"
+	},
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build && tsc --emitDeclarationOnly",
