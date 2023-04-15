@@ -45,6 +45,7 @@
 		"vue": "^3.2.0"
 	},
 	"devDependencies": {
+		"@rushstack/eslint-patch": "^1.2.0",
 		"@testing-library/vue": "^6.6.1",
 		"@types/jsdom": "^21.1.0",
 		"@types/node": "^18.15.11",
@@ -59,6 +60,7 @@
 		"eslint-plugin-vue": "^9.9.0",
 		"happy-dom": "^8.9.0",
 		"jsdom": "^21.1.0",
+		"lodash-es": "^4.17.21",
 		"postcss": "^8.4.21",
 		"postcss-import": "^15.1.0",
 		"postcss-nested": "^6.0.1",

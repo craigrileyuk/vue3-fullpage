@@ -1,8 +1,8 @@
 <template>
-	<Vue3Fullpage update-history tag="main" navigation-gap="1rem">
+	<Vue3Fullpage update-history tag="main" navigation-gap="1rem" @page-enter="onPageEnter" @page-leave="onPageLeave">
 		<section style="background-color: black"><h2>One</h2></section>
 		<section style="background-color: aqua"><h2>Two</h2></section>
-		<section style="background-color: seagreen"><h2>Three</h2></section>
+		<section id="who-are-we" style="background-color: seagreen"><h2>Three</h2></section>
 		<section style="background-color: rebeccapurple"><h2>Four</h2></section>
 		<AsyncPage style="background-color: white" />
 	</Vue3Fullpage>
@@ -22,6 +22,13 @@ const AsyncPage = defineAsyncComponent({
 			})
 		)
 });
+
+const onPageEnter = (index) => {
+	console.log('Page ' + index + ' is in the building');
+};
+const onPageLeave = (index) => {
+	console.log('Page ' + index + ' has left the building');
+};
 </script>
 
 <style>

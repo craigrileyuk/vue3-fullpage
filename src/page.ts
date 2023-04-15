@@ -21,7 +21,7 @@ export default defineComponent({
 			default: false
 		}
 	},
-	setup(props, { slots, attrs, emit }) {
+	setup(props, { slots, emit }) {
 		const pageRef = ref(null);
 		const isActive = ref(false);
 		useIntersectionObserver(pageRef, ([{ isIntersecting }]) => {
@@ -36,7 +36,7 @@ export default defineComponent({
 				id: props.id,
 				ref: pageRef,
 				class: {
-					'page-active': isActive.value
+					'is-active': isActive.value
 				}
 			});
 	}
