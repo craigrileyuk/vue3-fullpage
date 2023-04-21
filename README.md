@@ -18,4 +18,4 @@ A full-page scroller design from the ground up for use with Vue 3.
 
 ---
 
-For full installation instructions and documentation, please visit [southcoastweb](https://southcoastweb.co.uk/open-source-software/vue-3-fullpage/).
+For full installation instructions and documentation, please visit [southcoastweb](https://southcoastweb.co.uk/open-source-software/vue3-fullpage/).
